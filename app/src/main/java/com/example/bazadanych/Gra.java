@@ -1,7 +1,8 @@
 package com.example.bazadanych;
 
-import androidx.room3.Entity;
-import androidx.room3.PrimaryKey;
+
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 @Entity(tableName = "gry")
 public class Gra {
@@ -12,6 +13,8 @@ public class Gra {
     public int maxGraczy;
     public int minWiek;
     public String Kategoria;
+
+    public Gra() {}
 
     public Gra(String nazwa, int minGraczy, int maxGraczy, int minWiek, String kategoria) {
         this.nazwa = nazwa;

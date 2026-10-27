@@ -36,6 +36,11 @@ android {
 }
 
 dependencies {
+    implementation(libs.room3.common.jvm)
+    val room_version = "2.6.1"
+
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
     implementation(libs.activity.ktx)
     implementation(libs.appcompat)
     implementation(libs.constraintlayout)
@@ -43,8 +48,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.espresso.core)
     androidTestImplementation(libs.ext.junit)
-    val room_version = "3.0.3"
 
-    implementation("androidx.room3:room3-runtime:$room_version")
-    annotationProcessor("androidx.room3:room3-compiler:$room_version")
 }
